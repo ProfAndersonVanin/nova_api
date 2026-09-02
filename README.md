@@ -1,143 +1,106 @@
-# API de Livros
+<div align="center">
 
-## SW-II - Sistemas Web II
+# 📚 API de Livros
 
-Este repositório apresenta a atividade prática de construção de uma aplicação web para gerenciamento de livros.
+### 🧑‍💻 SW-II · Sistemas Web II
 
-A proposta é desenvolver uma API utilizando **FastAPI**, com persistência de dados em **MySQL**, administrado pelo **XAMPP** e pelo **phpMyAdmin**. Ao final da atividade, a API será integrada a um Front End criado com **HTML, CSS e JavaScript**.
+**Do banco de dados ao Front End, em quatro etapas práticas.**
 
-Esta atividade tem como finalidade o **fechamento da nota do 3º Bimestre da disciplina de SW-II (Sistemas Web II)**.
+[![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![XAMPP](https://img.shields.io/badge/XAMPP-FB7A24?logo=apache&logoColor=white)](https://www.apachefriends.org/)
+[![HTML](https://img.shields.io/badge/HTML-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/docs/Web/HTML)
+[![CSS](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=111111)](https://developer.mozilla.org/docs/Web/JavaScript)
 
----
+</div>
 
-## O que será construído
+> 🎓 **Atividade avaliativa do 3º Bimestre**  
+> Esta atividade tem como finalidade o **fechamento da nota do 3º Bimestre da disciplina de SW-II (Sistemas Web II)**.
 
-Durante as quatro etapas, será desenvolvida uma aplicação capaz de cadastrar e gerenciar livros.
+## 🎯 O desafio
 
-Cada livro terá, inicialmente, as seguintes informações:
+Construir uma aplicação web para gerenciamento de livros, começando pela API e pelo banco de dados e chegando a uma interface completa no navegador.
 
-- `id`: identificador do livro;
-- `titulo`: título do livro;
-- `autor`: autor do livro;
-- `ano_publicacao`: ano de publicação;
-- `disponivel`: situação de disponibilidade do livro.
+Cada livro terá:
 
-A aplicação deverá executar as operações CRUD:
+| Campo | Descrição |
+| --- | --- |
+| `id` | Identificador único |
+| `titulo` | Título do livro |
+| `autor` | Autor do livro |
+| `ano_publicacao` | Ano de publicação |
+| `disponivel` | Situação de disponibilidade |
 
-- **Create:** cadastrar livros;
-- **Read:** listar e consultar livros;
-- **Update:** atualizar livros;
-- **Delete:** excluir livros.
+## 🔁 CRUD completo
 
----
+| Símbolo | Operação | Ação |
+| --- | --- | --- |
+| 🟢 | **Create** | Cadastrar livros |
+| 🔵 | **Read** | Listar e consultar livros |
+| 🟠 | **Update** | Atualizar livros |
+| 🔴 | **Delete** | Excluir livros |
 
-## Objetivos da atividade
+## 🚀 Objetivos
 
 Ao concluir o projeto, o aluno deverá ser capaz de:
 
-- compreender a estrutura básica de uma API Web;
 - criar rotas com FastAPI;
-- utilizar métodos HTTP como `GET`, `POST`, `PUT` e `DELETE`;
-- conectar uma aplicação Python a um banco MySQL;
-- criar e utilizar modelos e schemas;
-- validar dados recebidos pela API;
-- tratar respostas e erros HTTP;
-- utilizar o XAMPP e o phpMyAdmin para administrar o banco;
-- construir uma interface com HTML, CSS e JavaScript;
-- consumir uma API usando JavaScript e `fetch`;
+- utilizar `GET`, `POST`, `PUT` e `DELETE`;
+- conectar Python a um banco MySQL;
+- utilizar XAMPP e phpMyAdmin;
+- criar modelos e schemas;
+- validar dados e tratar erros HTTP;
+- construir interfaces com HTML, CSS e JavaScript;
+- consumir uma API usando `fetch`;
 - utilizar o Source Control do VS Code;
-- registrar a evolução do projeto em um repositório GitHub.
+- registrar a evolução do projeto no GitHub.
 
----
+## 🧩 Jornada em 4 etapas
 
-## Organização das etapas
+### 🟦 Etapa 1 · Fundação
 
-### Etapa 1 - Preparação do ambiente
+Preparação do ambiente, dependências, banco `biblioteca_db`, conexão com MySQL e rota de saúde.
 
-Nesta etapa serão preparados:
+📖 [Abrir o Guia 1](01-fundacao-fastapi-mysql.md)
 
-- o projeto no VS Code;
-- o ambiente virtual Python;
-- as dependências da aplicação;
-- o banco `biblioteca_db`;
-- a conexão entre FastAPI e MySQL;
-- a rota de verificação da aplicação.
+### 🟩 Etapa 2 · Modelo e consultas
 
-Guia: [01-fundacao-fastapi-mysql.md](01-fundacao-fastapi-mysql.md)
+Criação do modelo `Livro`, schemas, sessão do banco e rotas `POST` e `GET`.
 
-### Etapa 2 - Modelo e rotas de cadastro e consulta
+📖 [Abrir o Guia 2](02-modelo-post-get.md)
 
-Nesta etapa serão criados:
+### 🟧 Etapa 3 · CRUD completo
 
-- o modelo `Livro`;
-- os schemas `LivroCriacao` e `LivroResposta`;
-- a sessão de acesso ao banco;
-- a rota `POST /livros`;
-- as rotas `GET /livros` e `GET /livros/{id_livro}`.
+Implementação das rotas `PUT` e `DELETE`, tratamento de erros e testes do CRUD.
 
-Guia: [02-modelo-post-get.md](02-modelo-post-get.md)
+📖 [Abrir o Guia 3](03-put-delete-crud.md)
 
-### Etapa 3 - Atualização, exclusão e CRUD completo
+### 🟥 Etapa 4 · Front End
 
-Nesta etapa serão criadas:
+Construção da interface com HTML, CSS e JavaScript para cadastrar, listar, editar e excluir livros.
 
-- a rota `PUT /livros/{id_livro}`;
-- a rota `DELETE /livros/{id_livro}`;
-- os tratamentos de erro;
-- os testes do CRUD completo;
-- a atualização do arquivo SQL do banco.
+📖 [Abrir o Guia 4](04-frontend-html-css-js.md)
 
-Guia: [03-put-delete-crud.md](03-put-delete-crud.md)
+## 🛠️ Stack da atividade
 
-### Etapa 4 - Construção do Front End
+`Python` · `FastAPI` · `Uvicorn` · `SQLAlchemy` · `PyMySQL` · `MySQL` · `XAMPP` · `phpMyAdmin` · `HTML` · `CSS` · `JavaScript` · `VS Code` · `GitHub`
 
-Nesta etapa será desenvolvida uma interface com:
+> 🟧 **Banco de dados:** o arquivo `database/biblioteca_db.sql` será versionado no GitHub para permitir a reconstrução do banco entre as aulas. O banco será administrado exclusivamente pelo **phpMyAdmin** do XAMPP. Não será utilizado o MySQL Workbench.
 
-- HTML para a estrutura da página;
-- CSS para o layout e a aparência;
-- JavaScript para comunicação com a API;
-- formulário de cadastro e edição;
-- listagem dos livros;
-- ações de atualização e exclusão.
+## 📅 Calendário de entregas
 
-Guia: [04-frontend-html-css-js.md](04-frontend-html-css-js.md)
+A atividade deve ser realizada em aula, uma etapa por vez. Não faça as quatro etapas de uma única vez.
 
----
+| Etapa | Turma 3F | Turma 3C | Entrega |
+| --- | --- | --- | --- |
+| 🟦 1 | 02/09/2026 | 03/09/2026 | Ambiente e conexão |
+| 🟩 2 | 09/09/2026 | 10/09/2026 | Modelo e `POST`/`GET` |
+| 🟧 3 | 16/09/2026 | 17/09/2026 | `PUT`/`DELETE` e CRUD |
+| 🟥 4 | 23/09/2026 | 24/09/2026 | Interface Web |
 
-## Ferramentas utilizadas
-
-- Python;
-- FastAPI;
-- Uvicorn;
-- SQLAlchemy;
-- PyMySQL;
-- MySQL;
-- XAMPP;
-- phpMyAdmin;
-- HTML;
-- CSS;
-- JavaScript;
-- Visual Studio Code;
-- GitHub.
-
-O banco será administrado exclusivamente pelo **phpMyAdmin**, utilizando o MySQL disponibilizado pelo XAMPP. Não será utilizado o MySQL Workbench.
-
----
-
-## Organização do trabalho
-
-Esta atividade deverá ser realizada em aula, uma etapa por vez.
-
-Não faça as quatro etapas de uma única vez. Cada etapa deverá ser desenvolvida conforme a orientação do professor e entregue na data correspondente à turma.
-
-| Etapa | Turma 3F | Turma 3C |
-| --- | --- | --- |
-| 1 | 02/09/2026 | 03/09/2026 |
-| 2 | 09/09/2026 | 10/09/2026 |
-| 3 | 16/09/2026 | 17/09/2026 |
-| 4 | 23/09/2026 | 24/09/2026 |
-
-> **ATENÇÃO:** não serão aceitas entregas antecipadas. As datas e os horários serão conferidos no histórico de commits do repositório GitHub do aluno antes da avaliação.
+> 🚨 **NÃO SERÃO ACEITAS ENTREGAS ANTECIPADAS.** As datas e os horários serão conferidos no histórico de commits do repositório GitHub do aluno antes da avaliação.
 
 Ao final de cada etapa, o aluno deverá:
 
@@ -147,77 +110,51 @@ Ao final de cada etapa, o aluno deverá:
 4. criar o commit da etapa;
 5. sincronizar as alterações com o GitHub.
 
-O histórico do GitHub será utilizado para acompanhar a evolução individual do projeto.
+## 🔄 Entre uma aula e outra
 
----
+Como os computadores podem ser limpos ao serem desligados, o GitHub será a fonte oficial do projeto.
 
-## Recomposição do projeto entre as aulas
+No início de cada nova etapa:
 
-Como os computadores utilizados nas aulas podem ser limpos ao serem desligados, o GitHub será a fonte oficial do projeto.
+1. clone novamente o repositório pelo VS Code;
+2. recrie o ambiente virtual;
+3. reinstale as dependências usando `requirements.txt`;
+4. recrie o `.env` local com o usuário `root`;
+5. inicie Apache e MySQL pelo XAMPP;
+6. importe `database/biblioteca_db.sql` pelo phpMyAdmin;
+7. continue a partir do conteúdo enviado ao GitHub.
 
-No início de cada nova etapa, o aluno deverá:
+🔒 O arquivo `.env` não deve ser publicado, pois contém a senha local do MySQL. O arquivo SQL deve permanecer no repositório.
 
-1. clonar novamente o repositório pelo VS Code;
-2. recriar o ambiente virtual;
-3. reinstalar as dependências usando `requirements.txt`;
-4. recriar o arquivo local `.env`;
-5. iniciar o Apache e o MySQL pelo XAMPP;
-6. importar `database/biblioteca_db.sql` pelo phpMyAdmin;
-7. continuar o desenvolvimento a partir do conteúdo enviado ao GitHub.
+## 🧱 Padrão de código
 
-O arquivo `.env` não deve ser publicado, pois contém a senha local do usuário `root`. O arquivo SQL deve ser mantido no repositório para permitir a reconstrução do banco.
+O projeto utiliza exemplos simples e didáticos. Prefira nomes em português para classes, funções e variáveis próprias:
 
----
+`Livro` · `LivroCriacao` · `LivroResposta` · `criar_livro` · `listar_livros` · `atualizar_livro` · `excluir_livro` · `resultado` · `consulta`
 
-## Padrão de código
+As rotas devem utilizar funções nomeadas com `def` e instruções claras. Não serão necessários `lambda`, funções anônimas ou abstrações avançadas que escondam a lógica.
 
-O material utiliza exemplos simples e didáticos. As funções, classes e variáveis criadas pelo aluno devem preferencialmente utilizar nomes em português, como:
-
-- `Livro`;
-- `LivroCriacao`;
-- `LivroResposta`;
-- `criar_livro`;
-- `listar_livros`;
-- `atualizar_livro`;
-- `excluir_livro`;
-- `sessao_banco`;
-- `resultado`;
-- `consulta`.
-
-As rotas deverão utilizar funções nomeadas com `def` e instruções claras. Não serão necessários `lambda`, funções anônimas ou abstrações avançadas que escondam a lógica da aplicação.
-
----
-
-## Avaliação
+## ✅ Avaliação
 
 A avaliação considerará:
 
-- a realização das etapas durante as aulas;
-- o funcionamento da API;
-- a conexão com o banco MySQL;
-- a implementação das operações CRUD;
-- a construção do Front End;
-- a organização do código;
-- a utilização de nomes claros e preferencialmente em português;
-- os testes realizados;
-- a presença dos arquivos no GitHub;
-- a sequência e as datas dos commits.
+- funcionamento da API e do banco;
+- implementação do CRUD;
+- construção do Front End;
+- organização e clareza do código;
+- testes realizados;
+- presença dos arquivos no GitHub;
+- sequência e datas dos commits;
+- realização das etapas durante as aulas.
 
+📋 [Abrir o Guia de avaliação do professor](05-guia-avaliacao-professor.md)
 
+## 🏁 Resultado esperado
 
----
+Ao final das quatro etapas, o aluno deverá possuir uma aplicação de livros com API FastAPI, banco MySQL funcionando no XAMPP, banco administrado pelo phpMyAdmin, CRUD completo, validações, tratamento de erros e interface web funcional.
 
-## Resultado esperado
+<div align="center">
 
-Ao final das quatro etapas, o aluno deverá possuir uma aplicação de livros com:
+**📚 Projeto de SW-II · 3º Bimestre**
 
-- API desenvolvida em FastAPI;
-- banco MySQL funcionando no XAMPP;
-- banco administrado pelo phpMyAdmin;
-- operações CRUD completas;
-- validação de dados;
-- tratamento de erros;
-- interface web funcional;
-- código e histórico de desenvolvimento armazenados no GitHub.
-
-Este projeto representa a consolidação dos conteúdos trabalhados em **SW-II - Sistemas Web II** durante o 3º Bimestre.
+</div>
