@@ -147,8 +147,6 @@ A avaliação considerará:
 - sequência e datas dos commits;
 - realização das etapas durante as aulas.
 
-📋 [Abrir o Guia de avaliação do professor](05-guia-avaliacao-professor.md)
-
 ## 🏁 Resultado esperado
 
 Ao final das quatro etapas, o aluno deverá possuir uma aplicação de livros com API FastAPI, banco MySQL funcionando no XAMPP, banco administrado pelo phpMyAdmin, CRUD completo, validações, tratamento de erros e interface web funcional.
